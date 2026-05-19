@@ -3,225 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ช่องทางติดต่อสำรอง</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top, rgba(0,120,255,.25), transparent 35%),
-        linear-gradient(180deg, #020817, #061a35);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .stars {
-      position: fixed;
-      inset: 0;
-      background-image:
-        radial-gradient(#ffffff55 1px, transparent 1px),
-        radial-gradient(#ffffff33 1px, transparent 1px);
-      background-size: 80px 80px, 130px 130px;
-      animation: moveStars 30s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes moveStars {
-      from { background-position: 0 0, 0 0; }
-      to { background-position: 500px 900px, 300px 700px; }
-    }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      margin: auto;
-      padding: 50px 18px;
-      text-align: center;
-    }
-
-    .logo {
-      position: fixed;
-      top: 10px;
-      left: 14px;
-      font-size: 28px;
-      font-weight: 900;
-      color: #fff;
-      z-index: 2;
-    }
-
-    .logo span {
-      color: #21b7ff;
-    }
-
-    h1 {
-      font-size: clamp(32px, 5vw, 56px);
-      margin: 10px 0 25px;
-      color: #ffd21f;
-      text-shadow:
-        3px 3px 0 #ff7a00,
-        5px 5px 0 #008cff;
-    }
-
-    .info {
-      font-size: clamp(18px, 2.5vw, 26px);
-      font-weight: 700;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    .info small {
-      display: block;
-      font-size: clamp(14px, 2vw, 18px);
-      color: #fff;
-    }
-
-    .red {
-      color: #ff1d1d;
-      font-weight: 900;
-    }
-
-    .alert {
-      font-size: clamp(34px, 5vw, 58px);
-      font-weight: 900;
-      color: #fff;
-      margin: 30px 0 20px;
-      text-shadow:
-        3px 3px 0 #b40000,
-        -2px -2px 0 #b40000,
-        0 0 10px #ff0000;
-    }
-
-    .sub {
-      font-size: clamp(20px, 3vw, 30px);
-      font-weight: 700;
-      margin-bottom: 25px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 22px;
-    }
-
-    .btn {
-      width: min(360px, 90%);
-      height: 64px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      text-decoration: none;
-      font-size: clamp(20px, 3vw, 30px);
-      font-weight: 900;
-      color: #333;
-      background: #fff;
-      box-shadow: 0 6px 0 rgba(0,0,0,.25), inset 0 0 12px rgba(255,255,255,.8);
-      transition: .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      filter: brightness(1.08);
-    }
-
-    .icon {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 20px;
-      font-weight: 900;
-      margin-left: -25px;
-      flex-shrink: 0;
-    }
-
-    .line .icon {
-      background: linear-gradient(#49e64d, #0abf18);
-      border: 5px solid #0d9b18;
-    }
-
-    .telegram {
-      background: linear-gradient(#ffffff, #dff7ff);
-      border: 5px solid #00aaff;
-      box-shadow: 0 0 0 4px #004d8a, 0 6px 0 rgba(0,0,0,.35);
-    }
-
-    .telegram .icon {
-      background: linear-gradient(#42c8ff, #0088cc);
-      border: 5px solid #006ca8;
-      font-size: 34px;
-    }
-
-    .live {
-      background: linear-gradient(#fff, #ffe1cc);
-      border: 5px solid #ff6a00;
-      box-shadow: 0 0 0 4px #b83b00, 0 6px 0 rgba(0,0,0,.35);
-    }
-
-    .live .icon {
-      background: linear-gradient(#ff9b3d, #ff5a00);
-      border: 5px solid #ff5a00;
-      font-size: 30px;
-    }
-
-    @media (max-width: 480px) {
-      .wrap { padding-top: 70px; }
-      .btn { height: 58px; }
-      .icon {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  </style>
+  <title>Support Center</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="stars"></div>
 
-  <div class="logo">YOUR<span>LOGO</span></div>
+  <main class="page">
+    <header class="header">
+      <div class="logo">YOUR<span>LOGO</span></div>
+    </header>
 
-  <main class="wrap">
-    <h1>ช่องทางติดต่อสำรอง!</h1>
+    <section class="hero">
+      <div class="badge">🎧 SUPPORT CENTER</div>
 
-    <div class="info">
-      หากไม่สามารถติดต่อแอดมินใน LINE@ ได้
-      <small>- ไม่ได้รับข้อความตอบกลับจากแอดมิน <span class="red">(นานเกิน 20 นาที)</span></small>
-      <small>- ไม่มีการ READ หรือ อ่านข้อความ <span class="red">(นานเกิน 20 นาที)</span></small>
-      <small>- ทำรายการแล้วไม่มีการตอบกลับจากแอดมิน <span class="red">(นานเกิน 20 นาที)</span></small>
-    </div>
+      <h1>ช่องทางติดต่อ<span>สำรอง!</span></h1>
+      <p class="lead">หากไม่สามารถติดต่อแอดมินใน <b>LINE@</b> ได้</p>
 
-    <div class="alert">โปรดอย่าตกใจ!</div>
+      <div class="info-box">
+        <p>ℹ️ ไม่ได้รับข้อความตอบกลับจากแอดมิน <span>(นานเกิน 20 นาที)</span></p>
+        <p>💬 ไม่มีการ READ หรืออ่านข้อความ <span>(นานเกิน 20 นาที)</span></p>
+        <p>🕘 ทำรายการแล้วไม่มีการตอบกลับจากแอดมิน <span>(นานเกิน 20 นาที)</span></p>
+      </div>
 
-    <div class="sub">ลูกค้าสามารถติดต่อเราได้ตามช่องทางต่อไปนี้</div>
+      <div class="warning">
+        <div class="warn-icon">!</div>
+        <div>
+          <h2>โปรดอย่าตกใจ!</h2>
+          <p>ลูกค้าสามารถติดต่อเราได้ตามช่องทางต่อไปนี้</p>
+        </div>
+      </div>
 
-    <div class="buttons">
-      <a class="btn line" href="#" target="_blank">
-        <span class="icon">LINE</span>
-        ไลน์ฉุกเฉิน
-      </a>
+      <div class="links">
+        <a class="link-card line" href="#" target="_blank">
+          <div class="icon">LINE</div>
+          <div class="text">
+            <h3>ไลน์ฉุกเฉิน</h3>
+            <p>ติดต่อแอดมินด่วน<br>พร้อมให้บริการตลอด 24 ชั่วโมง</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
 
-      <a class="btn line" href="#" target="_blank">
-        <span class="icon">LINE</span>
-        ไลน์ติดต่อสอบถาม
-      </a>
+        <a class="link-card line" href="#" target="_blank">
+          <div class="icon">LINE</div>
+          <div class="text">
+            <h3>ไลน์ติดต่อสอบถาม</h3>
+            <p>สอบถามข้อมูลทั่วไป<br>ทีมงานพร้อมให้บริการ</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
 
-      <a class="btn telegram" href="#" target="_blank">
-        <span class="icon">✈</span>
-        TELEGRAM
-      </a>
+        <a class="link-card telegram" href="#" target="_blank">
+          <div class="icon">✈</div>
+          <div class="text">
+            <h3>TELEGRAM</h3>
+            <p>ติดต่อผ่าน Telegram<br>รวดเร็ว ตอบกลับไว</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
 
-      <a class="btn live" href="#" target="_blank">
-        <span class="icon">💬</span>
-        LIVE CHAT
-      </a>
-    </div>
+        <a class="link-card live" href="#" target="_blank">
+          <div class="icon">💬</div>
+          <div class="text">
+            <h3>LIVE CHAT</h3>
+            <p>แชทกับทีมงานทันที<br>ให้บริการตลอดเวลา</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+      </div>
+
+      <div class="trust-box">
+        <div class="shield">✓</div>
+        <p>
+          เราพร้อมดูแลและให้บริการคุณอย่างดีที่สุด<br>
+          <span>ขอบคุณที่ไว้วางใจในบริการของเรา 💙</span>
+        </p>
+      </div>
+
+      <footer>© 2024 <b>YOURLOGO</b>. All Rights Reserved.</footer>
+    </section>
   </main>
+
 </body>
 </html>
